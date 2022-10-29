@@ -1,0 +1,42 @@
+//mini calculator
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	int n,a,b,c;
+	printf("enter first number:");
+	scanf("%d",&a);
+	printf("enter second number: ");
+	scanf("%d",&b);
+	printf("\n 1. ADD");
+	printf("\n 2. SUBTRACT");
+	printf("\n 3. MUL");
+	printf("\n 4. DIVIDE");
+	printf("\n 5. EXIT");
+	printf("\nSelect any one option from above:");
+	scanf("%d",&n);
+	
+	switch(n)
+	{
+		case 1:
+		c=a+b;
+		break;
+		case 2:
+		c=a-b;
+		break;
+		case 3:
+		c=a*b;
+		break;
+		case 4:
+		c=a/b;
+		break;
+		case 5:
+			exit(0);
+			default:
+			printf("Invalid Option. Try Again:");
+			
+		
+	}
+	printf("\n Result = %d", c);
+	return 0;
+}
