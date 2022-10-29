@@ -1,0 +1,70 @@
+//menu and bill
+#include<stdio.h>
+int main()
+{
+	int p,q,n,price,y,tp,c,s,tb;
+	char *food_name;
+	char e;
+	printf("\n 1. Pizza:");
+	printf("\n 2. Burger:");
+	printf("\n 3. Momos:");
+	printf("\n 4. Noodles:");
+	printf("\n 5. Manchurian:");
+	printf("\n 6. Select your food=");
+	scanf("%d",&n);
+	switch(n)
+	{
+		case 1:
+			p=100;
+			food_name="Pizza";
+			break;
+		case 2:
+			p=80;
+			food_name="Burger";
+			break;
+		case 3:
+			p=60;
+			food_name="Momos";
+			break;
+		case 4:
+			p=120;
+			food_name="Noodles";
+			break;
+		case 5:
+			p=150;
+			food_name="Manchurian";
+			break;
+		default:
+			printf("Not a valid option");		
+	}
+	printf("you selected:");
+	printf("\n Food =%s",food_name);
+	printf("\n Price per unit in Rs: %d",p);
+	printf("\n enter quantitiy:");
+	scanf("%d",&q);
+	price=q*p;
+	printf("\n total price=%d",price);
+	printf("\n extra stuffing=Rs20 per unit ");
+	scanf("%c",&e);
+	scanf("%c",&e);
+	if(e=='y')
+	{
+		 tp=q*e;
+   printf("\n %d",tp);
+	}
+	else
+	printf("not selscted");
+	
+//	tp=p+e;
+//	printf("\n total price=%d",tp);
+	c=(tp*0.05);
+	s=(tp*0.05);
+	printf("\n CGST @ 5% = %d",c);
+	printf("\n SGST @ 5% = %d",s);
+	tb=c+s+tp;
+	printf("\n total bill=%d",tb);
+	
+return 0;
+	
+	
+}
