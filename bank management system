@@ -1,0 +1,123 @@
+#include<iostream>
+using namespace std;
+// Creating the bank account for the customer
+// Deposit amount for the customer
+// Withdraw amount for the customer
+// Balance Enquiry by the customer
+// Show account holderb full detail
+// Closing or terminating a bank account
+// Updating the bank account
+int name, acc_no, type, deposit,x,deposit,draw1.close;
+void
+create_acc ()
+{
+  cout << "\n enter the account no.";
+  cin >> acc_no;
+  cout << "\n enter the bank account name:";
+  cin >> name;
+  cout << "\n enter the type of account";
+  cin >> type;
+  cout <<
+    "\nEnter The Initial amount(>=500 for Saving and >=1000 for current ) : ";
+  cin >> deposit;
+  cout << "\n ACCOUNT CREATED";
+}
+
+void
+show_account ()
+{
+  cout << "\nacc no:" << acc_no;
+  cout << "\n account name:" << name;
+  cout << "\n type of account:" << type;
+  cout << "\n balance account" << deposit;
+}
+
+void close(){
+    cout << "\n\n\tDo You Want To Close Your Accont? [Y/N] ";
+   cin >> close;
+   	if (close == 'y' || close == 'Y')
+   	{
+   		account=0;
+      	cout << "\n\n\t\t\tAccount Closed!";
+}
+void deposit_acc ()
+{
+  cout << "\n enter the amount you wanted to deposit";
+  cin >> deposit1;
+  deposit1 = deposit1 + deposit;
+  cout << deposit1;
+}
+
+void
+draw ()
+{
+  cout << "\n enter the amount you wanted to draw from your account";
+  cin >> draw1;
+  draw1 = deposit - draw;
+}
+
+void
+balance ()
+{
+  x = ((deposit1 + deposit) - draw);
+  cout << "\n the balance amount is:";
+cin >> x;
+    
+}
+void delete_account(){
+    delete()
+}
+int
+main ()
+{
+    char ch;
+	int num;
+// 	intro();
+	while(true)
+	{
+		system("cls");
+		cout<<"\n\n\n\tMAIN MENU";
+		cout<<"\n\n\t01. NEW ACCOUNT";
+		cout<<"\n\n\t02. DEPOSIT AMOUNT";
+		cout<<"\n\n\t03. WITHDRAW AMOUNT";
+		cout<<"\n\n\t04. BALANCE ENQUIRY";
+		cout<<"\n\n\t05. ALL ACCOUNT HOLDER LIST";
+		cout<<"\n\n\t06. CLOSE AN ACCOUNT";
+// 		cout<<"\n\n\t07. MODIFY AN ACCOUNT";
+		cout<<"\n\n\t08. EXIT";
+		cout<<"\n\n\tSelect Your Option (1-8) ";
+		cin>>ch;
+		system("cls");
+		switch(ch)
+		{
+		case '1':
+			create_acc ();
+			break;
+		case '2':
+			deposit_acc ();
+			break;
+		case '3':
+			draw ();
+			break;
+		case '4': 
+			show_account ();
+			break;
+		case '5':
+			display_all();
+			break;
+		case '6':
+			close();
+			break;
+// 		 case '7':
+// 			cout<<"\n\n\tEnter The account No. : "; cin>>num;
+// 			modify_account(num);
+// 			break;
+		 case '8':
+			cout<<"\n\n\tThanks for using bank managemnt system";
+			break;
+		 default :cout<<"\a";
+		}
+	
+}
+
+}
